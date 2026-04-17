@@ -4,7 +4,7 @@ A Flask-based web app that analyzes YouTube trends by fetching videos for a topi
 
 ## Live Demo
 
-[Live App](http://localhost:5000)
+[Live App](https://youtube-trend-analyzer-46er.onrender.com/)
 
 Replace the localhost link later with your deployed URL.
 
