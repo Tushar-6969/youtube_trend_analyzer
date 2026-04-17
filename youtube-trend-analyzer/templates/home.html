@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Trend Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function showLoader() {
+            document.getElementById("loader").style.display = "flex";
+            document.getElementById("submit-button").disabled = true;
+            document.getElementById("submit-button").textContent = "Analyzing...";
+        }
+    </script>
+</head>
+<body class="page-home">
+    <div class="page-shell">
+        <div class="bg-orb orb-one"></div>
+        <div class="bg-orb orb-two"></div>
+
+        <main class="hero-layout">
+            <section class="hero-card">
+                <span class="eyebrow">Strategy Dashboard</span>
+                <h1>YouTube Trend Analyzer</h1>
+                <p class="lead">
+                    Turn trending videos into a quick market read. Search any topic,
+                    scan the top results, and generate an AI summary that highlights
+                    the patterns worth noticing.
+                </p>
+
+                <div class="feature-grid">
+                    <div class="feature-tile">
+                        <span class="feature-label">Fast Topic Scan</span>
+                        <p>Collect top-performing videos around any niche or trend.</p>
+                    </div>
+                    <div class="feature-tile">
+                        <span class="feature-label">AI Summary</span>
+                        <p>Condense transcripts and descriptions into one clean brief.</p>
+                    </div>
+                    <div class="feature-tile">
+                        <span class="feature-label">Research Friendly</span>
+                        <p>Useful for creators, marketers, and interview prep workflows.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel-card">
+                <div class="panel-header">
+                    <span class="panel-kicker">Start Analysis</span>
+                    <h2>Analyze a topic</h2>
+                    <p>Enter a keyword and choose how many videos you want to review.</p>
+                </div>
+
+                <form action="/analyze" method="POST" class="analyzer-form" onsubmit="showLoader()">
+                    <label for="query">Topic</label>
+                    <input id="query" type="text" name="query" placeholder="AI tools, cricket highlights, startup advice..." required>
+
+                    <label for="limit">Number of videos</label>
+                    <input id="limit" type="number" name="limit" min="1" max="10" value="5" placeholder="5" required>
+
+                    <button id="submit-button" type="submit">Analyze Trends</button>
+                </form>
+
+                <div id="loader" class="loader-card" aria-live="polite">
+                    <div class="spinner"></div>
+                    <div>
+                        <p class="loader-title">Analyzing videos</p>
+                        <p class="loader-text">Fetching content and preparing your AI summary.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

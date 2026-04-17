@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="page-result">
+    <div class="page-shell">
+        <div class="bg-orb orb-three"></div>
+        <div class="bg-orb orb-four"></div>
+
+        <main class="results-layout">
+            <section class="results-header card">
+                <div>
+                    <span class="eyebrow">Report Ready</span>
+                    <h1>Trend Analysis Result</h1>
+                    <p class="lead">A polished snapshot of the videos reviewed and the narrative emerging from them.</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-tile">
+                        <span>Total videos</span>
+                        <strong>{{ total }}</strong>
+                    </div>
+                    <div class="stat-tile">
+                        <span>Analyzed</span>
+                        <strong>{{ analyzed }}</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section class="summary-card card">
+                <div class="section-heading">
+                    <h2>AI Trend Summary</h2>
+                </div>
+                <div class="summary-copy">{{ summary_html|safe }}</div>
+            </section>
+
+            <section class="videos-card card">
+                <div class="section-heading">
+                    <h2>Videos Analyzed</h2>
+                </div>
+
+                <div class="video-list">
+                    {% for v in videos %}
+                        <article class="video-item">
+                            <div class="video-meta">
+                                <h3>{{ v.title }}</h3>
+                                <span class="source-badge">{{ v.content_source }}</span>
+                            </div>
+                            <p class="video-preview">{{ v.preview }}</p>
+                        </article>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <a class="back-link" href="/">Back to search</a>
+        </main>
+    </div>
+</body>
+</html>

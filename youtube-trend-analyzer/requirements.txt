@@ -1,0 +1,6 @@
+flask
+requests
+youtube-transcript-api
+groq
+python-dotenv
+jinja2
