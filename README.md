@@ -22,15 +22,15 @@ Add your screenshots inside the root `screenshots` folder, then update filenames
 
 ### Home Page
 
-![Home Page](screenshots/home-page.jpeg)
+![Home Page](youtube-trend-analyzer/screenshots/home-page.jpeg)
 
 ### Results Page1
 
-![Results Page](screenshots/results-page1.jpeg)
+![Results Page](youtube-trend-analyzer/screenshots/results-page1.jpeg)
 
 ### Results Page2
 
-![Results Page](screenshots/results-page2.jpeg)
+![Results Page](youtube-trend-analyzer/screenshots/results-page2.jpeg)
 
 
 
