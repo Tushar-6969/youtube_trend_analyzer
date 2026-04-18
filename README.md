@@ -6,19 +6,16 @@ A Flask-based web app that analyzes YouTube trends by fetching videos for a topi
 
 [Live App](https://youtube-trend-analyzer-46er.onrender.com/)
 
-Replace the localhost link later with your deployed URL.
 
 ## Features
 
-- Search any topic and analyze up to 10 YouTube videos.
+- Search any topic and analyze up to 50 YouTube videos.
 - Fetch transcript data when available and fall back to cleaned video descriptions.
 - Generate an AI summary with clear sections for trends, insights, and patterns.
 - View a cleaner results page with structured summaries and readable video previews.
 - Responsive UI for desktop and mobile.
 
 ## Screenshots
-
-Add your screenshots inside the root `screenshots` folder, then update filenames here if needed.
 
 ### Home Page
 
@@ -88,7 +85,7 @@ http://localhost:5000
 ## Notes
 
 - If a transcript is unavailable, the app automatically uses a cleaned fallback based on the video description.
-- The live link above is currently set to localhost as a placeholder.
+
 
 ## Built By
 

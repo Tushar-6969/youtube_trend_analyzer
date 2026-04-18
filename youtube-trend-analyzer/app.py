@@ -26,8 +26,11 @@ def analyze():
     except Exception:
         limit = 5
 
-    if limit > 10:
-        limit = 10
+    if limit < 1:
+        limit = 1
+
+    if limit > 50:
+        limit = 50
 
     videos = fetch_videos(query, limit)
 
