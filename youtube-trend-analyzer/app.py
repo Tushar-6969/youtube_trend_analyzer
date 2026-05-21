@@ -37,7 +37,7 @@ def analyze():
     all_text = ""
     valid_videos = []
 
-    print(f"\nTotal videos fetched: {len(videos)}\n")
+    print(f"\nTotal videos fetched successfully: {len(videos)}\n")
 
     for video in videos:
         video_id = video["video_id"]
